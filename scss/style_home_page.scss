@@ -2,10 +2,9 @@ html{
     background-color: #c5c2c2;
     font-family: 'Lucida Sans', sans-serif;
     width: 100%;
-    background-size: cover;
-    
-
+    background-size: cover;   
 }
+
 // ============== HEADER ==============
 .main__header{
     z-index: 100;
@@ -90,10 +89,11 @@ html{
 
 #myVideo {
     position: fixed;
-    right: 0;
-    bottom: 0;
+ 
     min-width: 100%; 
     min-height: 100%;
+    max-width: 180%;
+    max-height: 180%;
     z-index: -1;
 }
 
@@ -140,7 +140,7 @@ html{
                 } 
 
                 &__label_second{
-                    font-size: 20px;
+                    font-size: 22px;
                     font-weight: bold;
                     letter-spacing: 1.4px;                
                     color:black;
@@ -149,9 +149,10 @@ html{
 
                 &__lista{
                     color:#10101E;
-                    font-size: 16px;
+                    font-size: 20px;
+                    font-weight: bold;
                     margin-top: 20px;
-                    line-height: 25px;
+                    line-height: 35px;
                     font-family: Arial, Helvetica, sans-serif;
                 }
 
@@ -165,6 +166,12 @@ html{
                     &__item{
                         height: 60px;
                         width: 60px;                                       
+                }
+
+                &__item:hover{
+                    height: 80px;
+                    width: 80px;  
+                    transition: 0.5s;
                 }
 
 
@@ -518,145 +525,9 @@ html{
                             max-width: 300px;                            
                         }
                     }
-                }
-
-
-        &__first {                       
-            margin: 7% 0% 0% 5%;
-            width: 90%;
-            height: auto;
-            min-height: 200px;
-            border-radius: 20px;
-            border: 3px solid white;
-            background-color: rgba(255, 255, 255, 0.6);
-            display: grid;
-            grid-template-columns: 40% 70%;   
-            overflow: hidden;                 
-
-        &__divs{
-            margin:10px;            
-            
-            &__img{
-                border-radius: 10px;
-                margin: 2% 0% 0% 2%;
-                
-            }
-
-            &__subdivs{
-                height: auto;
-                margin:1% 2% 4% 1%;
-
-                &__label_main{
-                    font-size: 30px;
-                    font-weight: bold;
-                    letter-spacing: 1.8px;                
-                    color: #10101E;
-                    font-family: Arial, Helvetica, sans-serif;                                        
-                } 
-
-                &__label_second{
-                    font-size: 20px;
-                    font-weight: bold;
-                    letter-spacing: 1.4px;                
-                    color:black;
-                    font-family: Arial, Helvetica, sans-serif;
-                } 
-
-                &__lista{
-                    color:#10101E;
-                    font-size: 16px;
-                    margin-top: 20px;
-                    line-height: 25px;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-
-                &__imagens{
-                    display: flex;
-                    justify-content: space-between;
-                    height: 100px;                    
-                    margin: 3% 2% 0% 2%;
-                    overflow: hidden;
-
-                    &__item{
-                        height: 60px;
-                        width: 60px;                                       
-                }
-
-
-                &__button{
-                    width: 40%;
-                    min-height: 50px;
-                    font-size: 20px;                
-                    font-family: 'Lucida Sans', sans-serif;
-                    color:white;
-                    margin: 0% 0% 1% 5%;
-                    border-radius: 5px;
-                    background-color: #1869a7; 
-                    border-color: #1869a7;               
-                    }
-
-                &__button:hover{
-                    background-color: #2E94E3;
-                    box-shadow: 0 0 30px #2E94E3;
-                }
-                }                    
-
-                &__buttons{
-                    display: flex;
-
-                    &__button{                    
-                        width: 90%;
-                        min-height: 40px;
-                        font-size: 20px;                        
-                        font-family: Arial, Helvetica, sans-serif;
-                        color:white;
-                        margin: 5%;
-                        border-radius: 10px;
-                        border-color: #1869a7;
-                        background-color: #1869a7;                    ;                              
-                    }
-
-                    &__button:hover{
-                        background-color: #2E94E3;
-                        box-shadow: 0 0 30px #2E94E3;
-                    }
-                }
-
-                &__cards{
-                    display: flex;
-                    flex-direction: row;
-                    
-
-                    &__card{
-                        background-color:blue;
-                        padding: 10px;     
-                        border-radius: 10px;
-                        border: 3px solid white;
-                        margin:2%;
-                        text-align: center;
-
-                        &__card-text{
-                            font-family: Arial, Helvetica, sans-serif;
-                            margin:20px;                            
-                        }
-
-                        &__card-img{
-                            max-height: 400px;
-                            max-width: 400px;
-                        }
-                    }
-                }
-
-
-
-
-        }
-
-    
+                }     
     }
-}
-}
-}
+    }
     }
 
     &__third {                       
@@ -669,6 +540,7 @@ html{
         background-color: rgba(255, 255, 255, 0.6);        
         overflow: hidden;                 
         text-align: center;
+        
         &__divs{
             margin:10px;            
             
@@ -712,31 +584,35 @@ html{
                     display: flex;
                     justify-content: space-between;
                     height: 100px;                    
-                    margin: 3% 2% 0% 2%;
+                    margin: 2% 10% 0% 10%;                    
                     overflow: hidden;
-
                     &__item{
                         height: 60px;
-                        width: 60px;                                       
-                }
+                        width: 60px;                                                           
 
+                    }               
+                    &__item:hover{
+                        height: 80px;
+                        width: 80px;  
+                        transition: 0.5s;
+                    }              
+    
+                    &__button{
+                        width: 40%;
+                        min-height: 50px;
+                        font-size: 20px;                
+                        font-family: 'Lucida Sans', sans-serif;
+                        color:white;
+                        margin: 0% 0% 1% 5%;
+                        border-radius: 5px;
+                        background-color: #1869a7; 
+                        border-color: #1869a7;               
+                        }
 
-                &__button{
-                    width: 40%;
-                    min-height: 50px;
-                    font-size: 20px;                
-                    font-family: 'Lucida Sans', sans-serif;
-                    color:white;
-                    margin: 0% 0% 1% 5%;
-                    border-radius: 5px;
-                    background-color: #1869a7; 
-                    border-color: #1869a7;               
+                    &__button:hover{
+                        background-color: #2E94E3;
+                        box-shadow: 0 0 30px #2E94E3;
                     }
-
-                &__button:hover{
-                    background-color: #2E94E3;
-                    box-shadow: 0 0 30px #2E94E3;
-                }
                 }                    
 
                 &__buttons{
@@ -784,137 +660,6 @@ html{
                         }
                     }
                 }
-
-
-        &__first {                       
-        margin: 7% 0% 0% 5%;
-        width: 90%;
-        height: auto;
-        min-height: 200px;
-        border-radius: 20px;
-        border: 3px solid white;
-        background-color: rgba(255, 255, 255, 0.6);
-        display: grid;
-        grid-template-columns: 30% 70%;   
-        overflow: hidden;                 
-
-        &__divs{
-            margin:10px;            
-            background-color: lightsalmon;
-            
-            &__img{
-                border-radius: 50px;
-                margin: 2% 0% 0% 2%;
-
-            }
-
-            &__subdivs{
-                height: auto;
-                margin:1% 2% 4% 1%;
-
-                &__label_main{
-                    font-size: 30px;
-                    font-weight: bold;
-                    letter-spacing: 1.8px;                
-                    color: #10101E;
-                    font-family: Arial, Helvetica, sans-serif;                                        
-                } 
-
-                &__label_second{
-                    font-size: 20px;
-                    font-weight: bold;
-                    letter-spacing: 1.4px;                
-                    color:black;
-                    font-family: Arial, Helvetica, sans-serif;
-                } 
-
-                &__lista{
-                    color:#10101E;
-                    font-size: 16px;
-                    margin-top: 20px;
-                    line-height: 25px;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-
-                &__imagens{
-                    display: flex;
-                    justify-content: space-between;
-                    height: 100px;                    
-                    margin: 3% 2% 0% 2%;
-                    overflow: hidden;
-
-                    &__item{
-                        height: 60px;
-                        width: 60px;                                       
-                }
-
-
-                &__button{
-                    width: 40%;
-                    min-height: 50px;
-                    font-size: 20px;                
-                    font-family: 'Lucida Sans', sans-serif;
-                    color:white;
-                    margin: 0% 0% 1% 5%;
-                    border-radius: 5px;
-                    background-color: #1869a7; 
-                    border-color: #1869a7;               
-                    }
-
-                &__button:hover{
-                    background-color: #2E94E3;
-                    box-shadow: 0 0 30px #2E94E3;
-                }
-                }                    
-
-                &__buttons{
-                    display: flex;
-
-                    &__button{                    
-                        width: 90%;
-                        min-height: 40px;
-                        font-size: 20px;                        
-                        font-family: Arial, Helvetica, sans-serif;
-                        color:white;
-                        margin: 5%;
-                        border-radius: 10px;
-                        border-color: #1869a7;
-                        background-color: #1869a7;                    ;                              
-                    }
-
-                    &__button:hover{
-                        background-color: #2E94E3;
-                        box-shadow: 0 0 30px #2E94E3;
-                    }
-                }
-
-                &__cards{
-                    display: flex;
-                    flex-direction: row;
-                    
-
-                    &__card{
-                        background-color:blue;
-                        padding: 10px;     
-                        border-radius: 10px;
-                        border: 3px solid white;
-                        margin:2%;
-                        text-align: center;
-
-                        &__card-text{
-                            font-family: Arial, Helvetica, sans-serif;
-                            margin:20px;                            
-                        }
-
-                        &__card-img{
-                            max-height: 400px;
-                            max-width: 400px;
-                        }
-                    }
-                }
-        }    
-    }
-}
             }
         }
     }
