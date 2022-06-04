@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Type of encoding used (utf-8) -->
+        <meta charset="utf-8"/>
+        <!-- Page's description -->
+        <meta name="description" content="Imobiliaria Page"/>
+        <!-- Page's author -->
+        <meta name="author" content="Leonardo Antunes dos Santos"/>
+        <!-- Mobile devices screen configurarion to load the page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Refresh the page in each 3 seconds -->
+        <meta http-equiv="refresh" content=""/>
+        <!-- Page title -->
+        <title> Leonardo Antunes dos Santos </title>
+        <!-- CSS reference -->
+        <!--<link href="{% static 'App01/css/style.css' %}" rel="stylesheet">-->
+        <link href="scss/style_home_page.css" rel="stylesheet">
+        <link href="css/reset.css" rel="stylesheet">
+    </head>
+
+
+<body class="main_body", onload="initClock()">
+    <!-- Vídeo de background -->
+  
+    <video autoplay muted loop id="myVideo">
+        <source src="videos/video (1).mp4" type="video/mp4">
+    </video>
+  
+    <!-- Header -->
+    <header class="main__header">
+        <div class="main__header__logo">
+            <p> Leonardo Antunes dos Santos </p>
+        </div>
+        <!-- Navegação principal -->        
+        <nav class="main__header__nav">
+            <ul class="main__header__nav__list">
+                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_sobre_mim"> Sobre mim </a> </li> 
+                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_projetos"> Projetos </a> </li> 
+                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_contato"> Contato </a> </li>             
+            </ul>
+            <ul class="main__header__nav__list_clock">
+                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link">
+                    <div class="main__header__nav__list__item__datetime">                                     
+                       <div class="main__header__nav__list__item__datetime__date__time">
+                         <span id="hour">00</span>:
+                         <span id="minutes">00</span>:
+                         <span id="seconds">00</span>
+                         <span id="period">AM</span>
+                       </div>
+                   </div> 
+                 </a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content__section">        
+        <section class="content__section__first" id="section_sobre_mim">
+            <div class="content__section__first__divs">
+                <img src="img/Leonardo.jpeg" class="content__section__first__divs__img"> 
+            </div>
+
+            <div class="content__section__first__divs">
+                <div class="content__section__first__divs__subdivs">
+                    <label class="content__section__first__divs__subdivs__label_main"> Leonardo Antunes dos Santos </label>
+                </div>
+
+
+                <div class="content__section__first__divs__subdivs">
+                    <label class="content__section__first__divs__subdivs__label_second">
+                        Desenvolvedor de software com experiência em diferentes tecnologias e linguagens de programação.
+                        <br> <br> Possuo experiência nas áreas de: 
+                    </label>
+              
+                        <ul class="content__section__first__divs__subdivs__lista">
+                            <li> Digitalização de processos Industriais </li>
+                            <li> Criação de plataformas web</li>
+                            <li> Machine Learn e Deep Learn </li>
+                            <li> Criação de algoritmos de Visão Computacional </li>
+                            <li> Arquitetura e operações em bancos de dados (SQL, MySQL, Postgree)</li>                            
+                        </ul>    
+                    <label class="content__section__first__divs__subdivs__label_second">
+                        <br><br>
+                        
+                         Confira abaixo algumas das tecnologias que utilizo no dia a dia:
+                    </label>
+                    
+                    <div class="content__section__first__divs__subdivs__imagens">
+                        <img src="img/python.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                        <img src="img/Csharp_Logo.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                        <img src="img/html.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                        <img src="img/css.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                        <img src="img/javascript.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                        <img src="img/postgree.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                    </div>
+
+                </div>
+
+                <!--
+                <div class="content__section__first__divs__subdivs__buttons">
+                    <button class="content__section__first__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
+                       <p> Projetos </p>
+                    </button>
+                    <button class="content__section__first__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
+                        <p> Contato </p>
+                    </button>
+                </div>
+                -->
+
+            </div>
+        </section> 
+
+        <section class="content__section__second" id="section_projetos">
+       
+            <div class="content__section__second__divs">
+                <div class="content__section__second__divs__subdivs">
+                    <label class="content__section__second__divs__subdivs__label_main"> Alguns Projetos </label>
+                </div>
+                
+                
+                <div class="content__section__second__divs__subdivs">
+                    <div class="content__section__second__divs__subdivs__cards">
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                               <p> Classificação de Vagas de Estacionamento com Visão Computacional </p>
+                            </div>     
+                            
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Este algoritmo indica o status de ocupação de vagas de estacionamento utilizando técnicas de 
+                                visão computacional. O projeto poderá contar com versões simples contendo apenas técnicas de processamento
+                                de imagens, como também com técncias de Inteligência Artificial como SVM e Random Forest. </p>
+                            </div> 
+    
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/parkinlot.png" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+    
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                                <p> Controle de Dispositivos com Visão Computacional </p></a>
+                            </div>
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Este projeto realiza o monitoramento da distância entre dedos utilizando Visão Computacional. 
+                                    Pode ser utilizado para controlar dispositivos físicos como luzes, fechaduras e aumento de volume de dispositvos eletrônicos. </p>
+                            </div> 
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/volume_monitor.png" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                               <a href="https://github.com/Antunes1993/ParkingSpaceDetection" class="content__section__second__divs__subdivs__cards__card__card-ref"> <p> Detector de Perda de Atenção com Visão Computacional </p></a>
+                            </div>     
+                            
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Este projeto indica se uma pessoa está com níveis reduzidos de atenção ao executar uma atividade, 
+                                    identificando se ela apresenta sinais de cansaço e sonolência. Pode ser usado para sistemas de monitoramento de condição de alerta. </p>
+                            </div> 
+    
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/attention_detector.png" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="content__section__second__divs__subdivs__cards">
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                                <p> Interface de Controle com Visão Computacional </p>
+                            </div>
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Este projeto cria uma interface de controle e permite a interação do usuário com essa interface.
+                                    Este projeto pode ser utilizando em conjunto com óculos de realidade virtual para permitir interação
+                                    dinâmica com objetos em um ambiente físico. </p>
+                            </div> 
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/panel.png" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+    
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                                <p> Análise de Investimentos </p>
+                            </div>
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Utilizando técnicas de Data Science, este projeto propõe estimar boas escolhas de investimentos financeiros
+                                    utilizando três técnicas (Equal Weight, Quantitative Momentum e Quantitative Value). </p>
+                            </div>
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/invest.jpg" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+
+
+
+                        <div class="content__section__second__divs__subdivs__cards__card">
+                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
+                                <p> Dashboards e Plataformas Web </p>
+                            </div>
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <p> Criação de Dashboards e sistemas de consultas em banco de dados utilizando diferentes tecnologias, 
+                                    como frameworks Django e .NET, front-end com HTML/CSS e WPF e bancos de dados como SQL, MySQL e PostGree. </p>
+                            </div> 
+
+                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
+                                <img src="img/dashboard_wpf.png" class="content__section__second__divs__subdivs__cards__card__card-img">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                    
+                <!--
+                <div class="content__section__second__divs__subdivs__buttons">
+                    <button class="content__section__second__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
+                        <p> Sobre mim </p>
+                    </button>
+                    <button class="content__section__second__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
+                        <p> Contato </p>
+                    </button>
+                </div>
+                -->    
+            </div>
+        </section> 
+
+        <section class="content__section__third" id="section_contato">
+            <div class="content__section__third__divs">
+            </div>
+        
+            <div class="content__section__third__divs">
+                <div class="content__section__third__divs__subdivs">
+                    <label class="content__section__third__divs__subdivs__label_main"> Contato </label>
+                </div>
+                <div class="content__section__third__divs__subdivs">
+                    <label class="content__section__third__divs__subdivs__label_second">
+                        Caso tenha interesse, você pode entrar em contato comigo pelos seguintes canais: 
+                    </label>
+            
+                    <grid>
+                        <div class="content__section__third__divs__subdivs__imagens">
+                            <a href= "whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados."><img src="img/whatsapplogo.png" class="content__section__third__divs__subdivs__imagens__item"></a> 
+                            <a href= "https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/"><img src="img/linkedin.png" class="content__section__third__divs__subdivs__imagens__item"></a> 
+                            <a href= "mailto:antunesleonardo12@gmail.com?subject = Contato&body = Olá, gostaria de conhecer mais sobre os projetos anunciados. Atenciosamente."><img src="img/emaillogo.png" class="content__section__third__divs__subdivs__imagens__item"></a>     
+                        </div>
+                    </grid>
+                </div>                  
+            </div>
+        </section> 
+    </main>
+</body>
+
+<script>
+    function updateClock(){
+
+        var now = new Date();        
+        var dnum=now.getDate();
+        var hou=now.getHours();
+        var min= now.getMinutes();
+        var sec=now.getSeconds(); 
+        var pe = "AM"
+
+        if (hou==0){
+            hou=12;
+        }
+        if(hou>12){
+            hou=hou-12;
+            pe="PM";
+        }        
+        
+        Number.prototype.pad=function(digits){ 
+            for(var n=this.toString(); n.length<digits;n=0+n);
+            return n;
+        }
+
+        var_ids = ["hour","minutes","seconds","period"];
+        var_values = [hou.pad(2),min.pad(2),sec.pad(2),pe];
+
+        for (var i = 0; i< 4; i++)
+            document.getElementById(var_ids[i]).firstChild.nodeValue = var_values[i];    
+    }
+
+    function initClock(){
+        updateClock();
+        window.setInterval("updateClock()",1);
+    }
+    </script>
+</html>
+
+

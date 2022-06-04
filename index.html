@@ -1,297 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <!-- Type of encoding used (utf-8) -->
-        <meta charset="utf-8"/>
-        <!-- Page's description -->
-        <meta name="description" content="Imobiliaria Page"/>
-        <!-- Page's author -->
-        <meta name="author" content="Leonardo Antunes dos Santos"/>
-        <!-- Mobile devices screen configurarion to load the page -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- Refresh the page in each 3 seconds -->
-        <meta http-equiv="refresh" content=""/>
-        <!-- Page title -->
-        <title> Leonardo Antunes dos Santos </title>
-        <!-- CSS reference -->
-        <!--<link href="{% static 'App01/css/style.css' %}" rel="stylesheet">-->
-        <link href="scss/style_home_page.css" rel="stylesheet">
-        <link href="css/reset.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website complete</title>
     </head>
-
-
-<body class="main_body", onload="initClock()">
-    <!-- Vídeo de background -->
-  
-    <video autoplay muted loop id="myVideo">
-        <source src="videos/video (1).mp4" type="video/mp4">
-    </video>
-  
-    <!-- Header -->
-    <header class="main__header">
-        <div class="main__header__logo">
-            <p> Leonardo Antunes dos Santos </p>
-        </div>
-        <!-- Navegação principal -->        
-        <nav class="main__header__nav">
-            <ul class="main__header__nav__list">
-                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_sobre_mim"> Sobre mim </a> </li> 
-                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_projetos"> Projetos </a> </li> 
-                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link" href="#section_contato"> Contato </a> </li>             
-            </ul>
-            <ul class="main__header__nav__list_clock">
-                <li class="main__header__nav__list__item"> <a class="main__header__nav__list__item__link">
-                    <div class="main__header__nav__list__item__datetime">                                     
-                       <div class="main__header__nav__list__item__datetime__date__time">
-                         <span id="hour">00</span>:
-                         <span id="minutes">00</span>:
-                         <span id="seconds">00</span>
-                         <span id="period">AM</span>
-                       </div>
-                   </div> 
-                 </a></li>  
-            </ul>
-        </nav>
-    </header>
-
-    <main class="content__section">        
-        <section class="content__section__first" id="section_sobre_mim">
-            <div class="content__section__first__divs">
-                <img src="img/Leonardo.jpeg" class="content__section__first__divs__img"> 
-            </div>
-
-            <div class="content__section__first__divs">
-                <div class="content__section__first__divs__subdivs">
-                    <label class="content__section__first__divs__subdivs__label_main"> Leonardo Antunes dos Santos </label>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Marlon</a>
                 </div>
 
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <!--<li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>-->
+                    </ul>
+                </div>
 
-                <div class="content__section__first__divs__subdivs">
-                    <label class="content__section__first__divs__subdivs__label_second">
-                        Desenvolvedor de software com experiência em diferentes tecnologias e linguagens de programação.
-                        <br> <br> Possuo experiência nas áreas de: 
-                    </label>
-              
-                        <ul class="content__section__first__divs__subdivs__lista">
-                            <li> Digitalização de processos Industriais </li>
-                            <li> Criação de plataformas web</li>
-                            <li> Machine Learn e Deep Learn </li>
-                            <li> Criação de algoritmos de Visão Computacional </li>
-                            <li> Arquitetura e operações em bancos de dados (SQL, MySQL, Postgree)</li>                            
-                        </ul>    
-                    <label class="content__section__first__divs__subdivs__label_second">
-                        <br><br>
-                        
-                         Confira abaixo algumas das tecnologias que utilizo no dia a dia:
-                    </label>
-                    
-                    <div class="content__section__first__divs__subdivs__imagens">
-                        <img src="img/python.png" class="content__section__first__divs__subdivs__imagens__item"> 
-                        <img src="img/Csharp_Logo.png" class="content__section__first__divs__subdivs__imagens__item"> 
-                        <img src="img/html.png" class="content__section__first__divs__subdivs__imagens__item"> 
-                        <img src="img/css.png" class="content__section__first__divs__subdivs__imagens__item"> 
-                        <img src="img/javascript.png" class="content__section__first__divs__subdivs__imagens__item"> 
-                        <img src="img/postgree.png" class="content__section__first__divs__subdivs__imagens__item"> 
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Leonardo</span><br> Software Developer</h1>
+
+                    <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://github.com/Antunes1993" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="105" href="assets/img/perfil2.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/perfil3.png" alt="">
                     </div>
-
-                </div>
-
-                <!--
-                <div class="content__section__first__divs__subdivs__buttons">
-                    <button class="content__section__first__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
-                       <p> Projetos </p>
-                    </button>
-                    <button class="content__section__first__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
-                        <p> Contato </p>
-                    </button>
-                </div>
-                -->
-
-            </div>
-        </section> 
-
-        <section class="content__section__second" id="section_projetos">
-       
-            <div class="content__section__second__divs">
-                <div class="content__section__second__divs__subdivs">
-                    <label class="content__section__second__divs__subdivs__label_main"> Alguns Projetos </label>
-                </div>
-                
-                
-                <div class="content__section__second__divs__subdivs">
-                    <div class="content__section__second__divs__subdivs__cards">
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                               <p> Classificação de Vagas de Estacionamento com Visão Computacional </p>
-                            </div>     
-                            
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Este algoritmo indica o status de ocupação de vagas de estacionamento utilizando técnicas de 
-                                visão computacional. O projeto poderá contar com versões simples contendo apenas técnicas de processamento
-                                de imagens, como também com técncias de Inteligência Artificial como SVM e Random Forest. </p>
-                            </div> 
-    
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/parkinlot.png" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-    
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                                <p> Controle de Dispositivos com Visão Computacional </p></a>
-                            </div>
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Este projeto realiza o monitoramento da distância entre dedos utilizando Visão Computacional. 
-                                    Pode ser utilizado para controlar dispositivos físicos como luzes, fechaduras e aumento de volume de dispositvos eletrônicos. </p>
-                            </div> 
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/volume_monitor.png" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                               <a href="https://github.com/Antunes1993/ParkingSpaceDetection" class="content__section__second__divs__subdivs__cards__card__card-ref"> <p> Detector de Perda de Atenção com Visão Computacional </p></a>
-                            </div>     
-                            
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Este projeto indica se uma pessoa está com níveis reduzidos de atenção ao executar uma atividade, 
-                                    identificando se ela apresenta sinais de cansaço e sonolência. Pode ser usado para sistemas de monitoramento de condição de alerta. </p>
-                            </div> 
-    
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/attention_detector.png" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="content__section__second__divs__subdivs__cards">
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                                <p> Interface de Controle com Visão Computacional </p>
-                            </div>
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Este projeto cria uma interface de controle e permite a interação do usuário com essa interface.
-                                    Este projeto pode ser utilizando em conjunto com óculos de realidade virtual para permitir interação
-                                    dinâmica com objetos em um ambiente físico. </p>
-                            </div> 
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/panel.png" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-    
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                                <p> Análise de Investimentos </p>
-                            </div>
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Utilizando técnicas de Data Science, este projeto propõe estimar boas escolhas de investimentos financeiros
-                                    utilizando três técnicas (Equal Weight, Quantitative Momentum e Quantitative Value). </p>
-                            </div>
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/invest.jpg" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-
-
-
-                        <div class="content__section__second__divs__subdivs__cards__card">
-                            <div class="content__section__second__divs__subdivs__cards__card__card-title">
-                                <p> Dashboards e Plataformas Web </p>
-                            </div>
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <p> Criação de Dashboards e sistemas de consultas em banco de dados utilizando diferentes tecnologias, 
-                                    como frameworks Django e .NET, front-end com HTML/CSS e WPF e bancos de dados como SQL, MySQL e PostGree. </p>
-                            </div> 
-
-                            <div class="content__section__second__divs__subdivs__cards__card__card-text">
-                                <img src="img/dashboard_wpf.png" class="content__section__second__divs__subdivs__cards__card__card-img">
-                            </div>
-                        </div>
-                    </div> 
-                </div>
                     
-                <!--
-                <div class="content__section__second__divs__subdivs__buttons">
-                    <button class="content__section__second__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
-                        <p> Sobre mim </p>
-                    </button>
-                    <button class="content__section__second__divs__subdivs__buttons__button" onclick=AtualizarCliente()>
-                        <p> Contato </p>
-                    </button>
+                    <div>
+                        <h2 class="about__subtitle">I'am Leonardo</h2>
+                        <p class="about__text">Graduated in Automation Engineering from CEFET/RJ currently doing a specialization in Computer Engineering at UFRJ and Data Science at USP. <br> <br> I'm a FullStack developer with solid experience in Web Development, Machine Learning and Computer Vision algorithms. </p>           
+                    </div>                                   
                 </div>
-                -->    
-            </div>
-        </section> 
+            </section>
 
-        <section class="content__section__third" id="section_contato">
-            <div class="content__section__third__divs">
-            </div>
-        
-            <div class="content__section__third__divs">
-                <div class="content__section__third__divs__subdivs">
-                    <label class="content__section__third__divs__subdivs__label_main"> Contato </label>
-                </div>
-                <div class="content__section__third__divs__subdivs">
-                    <label class="content__section__third__divs__subdivs__label_second">
-                        Caso tenha interesse, você pode entrar em contato comigo pelos seguintes canais: 
-                    </label>
-            
-                    <grid>
-                        <div class="content__section__third__divs__subdivs__imagens">
-                            <a href= "whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados."><img src="img/whatsapplogo.png" class="content__section__third__divs__subdivs__imagens__item"></a> 
-                            <a href= "https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/"><img src="img/linkedin.png" class="content__section__third__divs__subdivs__imagens__item"></a> 
-                            <a href= "mailto:antunesleonardo12@gmail.com?subject = Contato&body = Olá, gostaria de conhecer mais sobre os projetos anunciados. Atenciosamente."><img src="img/emaillogo.png" class="content__section__third__divs__subdivs__imagens__item"></a>     
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Below are some of the areas I work with on a daily basis:</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!--<i class='skills__icon'></i>-->
+                                <span class="skills__name">Backend Development</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
                         </div>
-                    </grid>
-                </div>                  
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!--<i class='bx bxl-css3 skills__icon'></i>-->
+                                <span class="skills__name">Front-End Development</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                               <!-- <i class='bx bxl-javascript skills__icon' ></i>-->
+                                <span class="skills__name">Machine Learning</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!--<i class='bx bxs-paint skills__icon'></i>-->
+                                <span class="skills__name">Computer Vision </span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Work</h2>
+
+                <div class="work__container bd-grid">
+                    <a class="work__img">
+                        <p> Parking Spaces Detection </p>
+                        <img src="assets/img/parkinlot.png" alt="">
+                    </a>
+                    <a class="work__img">
+                        <p> Joint monitoring to trigger devices </p>
+                        <img src="assets/img/volume_monitor.png" alt="">
+                    </a>
+                    <a class="work__img">
+                        <p> Sleep and Loss Focus Detector </p>
+                        <img src="assets/img/attention_detector.png" alt="">
+                    </a>
+                    <a class="work__img">
+                        <p> Financial Investment Recomendation</p>
+                        <img src="assets/img/invest.jpg" alt="">
+                    </a>
+                    <a class="work__img">
+                        <p> Desktop and Web Dashboards </p>
+                        <img src="assets/img/dashboard_wpf.png" alt="">
+                    </a>
+                    <a class="work__img">
+                        <p> API Rest Design </p>
+                        <img src="assets/img/rest.png" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <!--
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+            -->
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Leonardo</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="footer__icon"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://github.com/Antunes1993" class="footer__icon"><i class='bx bxl-github' ></i></a>
             </div>
-        </section> 
-    </main>
-</body>
+        </footer>
 
-<script>
-    function updateClock(){
 
-        var now = new Date();        
-        var dnum=now.getDate();
-        var hou=now.getHours();
-        var min= now.getMinutes();
-        var sec=now.getSeconds(); 
-        var pe = "AM"
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-        if (hou==0){
-            hou=12;
-        }
-        if(hou>12){
-            hou=hou-12;
-            pe="PM";
-        }        
-        
-        Number.prototype.pad=function(digits){ 
-            for(var n=this.toString(); n.length<digits;n=0+n);
-            return n;
-        }
-
-        var_ids = ["hour","minutes","seconds","period"];
-        var_values = [hou.pad(2),min.pad(2),sec.pad(2),pe];
-
-        for (var i = 0; i< 4; i++)
-            document.getElementById(var_ids[i]).firstChild.nodeValue = var_values[i];    
-    }
-
-    function initClock(){
-        updateClock();
-        window.setInterval("updateClock()",1);
-    }
-    </script>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
-
-
