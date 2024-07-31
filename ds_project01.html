@@ -9,14 +9,14 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         
-        <title>Leonardo Antunes - Software Developer & Automation Engineer </title>
+        <title>Leonardo Antunes</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Leonardo</a>
+                    <img src="assets/img/code.svg" alt="Welcome GIF" class="home__gif" style="width: 30px;">
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -39,14 +39,13 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title"> Facial <span class="home__title-color">Mask</span> Detector<br> </h1>
+                    <h1 class="home__title"> Technical <span class="home__title-color">Analysis</span><br> with <span class="home__title-color"> SMA and EMA </span></h1>
 
                     <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
                     <a href="https://github.com/Antunes1993" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
@@ -66,14 +65,19 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/prom_img5.png" alt="">
+                        <img src="assets/img/prom_img1.jpg" alt="">
                     </div>
                     
                     <div>
-                        <p class="about__text">
-                            This project involves developing a Facial Mask Detector using advanced computer vision techniques. Leveraging Convolutional Neural Networks (CNNs), the system is trained to accurately identify whether individuals are wearing facial masks or not in real-time.                                 
-                        </p>                        
-                    </div>
+                        <p class="about__text">                        
+                            This project consists of obtaining financial data for the IBOV index and using it to create Simple Moving Averages (SMA) and Exponential Moving Averages (EMA).
+                            <br><br>
+                            The project includes the implementation of buy and sell indicators based on these moving averages, enabling users to make informed investment decisions.
+                            <br><br>
+                            Users can utilize the provided strategies or adapt them to their specific investment objectives.
+                        </p>
+                    </div>                                  
+                </div>
             </section>
 
             <section class="about section " id="technicalInformation">
@@ -83,25 +87,53 @@
   
                     
                     <div>
-                        <p class="about__text">
-                            The model is fine-tuned with a dataset containing various images of people with and without masks, ensuring robustness in diverse environments and lighting conditions.
+                        <p class="about__text">                           
+                            The Simple Moving Average (SMA) is calculated using the formula:
                             <br><br>
-                            Implemented in <span class="home__title-color">Python</span>, the project utilizes <span class="home__title-color">TensorFlow</span> and <span class="home__title-color">Keras</span> for building and training the CNN models, while <span class="home__title-color">OpenCV</span> is used for real-time image processing and camera integration. The solution provides accurate mask detection with high precision, contributing to public health efforts by ensuring compliance with mask-wearing guidelines in various settings.
+                            <span class="home__title-color">SMA = (P1 + P2 + ... + Pn) / n</span>
+                            <br><br>
+                            where P is the price at each period and n is the number of periods.
+                            <br><br>
+                            The Exponential Moving Average (EMA) is calculated using the formula:
+                            <br><br>
+                            <span class="home__title-color">EMA<sub>t</sub> = (P<sub>t</sub> * (2 / (n + 1))) + (EMA<sub>t-1</sub> * (1 - (2 / (n + 1))))</span>
+                            <br><br>
+                            The project includes the implementation of buy and sell indicators based on these moving averages, enabling users to make informed investment decisions.
+                            <br><br>
+                            This project was built in <span class="home__title-color">Python</span> programming language using the 
+                            <span class="home__title-color">Pandas</span> library, among others.
                         </p>
+
                     </div>                                                      
                     <div class="about__img2">
-                        <image src="assets/img/prom_img6.png"></image>    
+                        <image src="assets/img/ema.png"></image> 
+                        <br>    
+                        <image src="assets/img/ema2.png"></image>     
                     </div>  
                 </div>
                 
             </section>
 
             <section class="about section " id="video">
-                <h2 class="section-title"> Be Safe </h2>
+                <h2 class="section-title"> Turn Data into Money </h2>
             </section>
             
 
-            <!--===== CONTACT =====-->  
+            <!--===== CONTACT =====-->
+            <!--
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+            -->
         </main>
 
         <!--===== FOOTER =====-->

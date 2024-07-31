@@ -9,14 +9,14 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         
-        <title>Leonardo Antunes - Software Developer & Automation Engineer </title>
+        <title>Leonardo Antunes</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Leonardo</a>
+                    <img src="assets/img/code.svg" alt="Welcome GIF" class="home__gif" style="width: 30px;">
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -39,14 +39,13 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title"> Facial <span class="home__title-color">Mask</span> Detector<br> </h1>
+                    <h1 class="home__title">Stock <span class="home__title-color">Price Prediction</span><br> with <span class="home__title-color">CNN-biLSTM & CNN-biGRU</span></h1>
 
                     <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="button">Contact</a>
                 </div>
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
                     <a href="https://github.com/Antunes1993" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
@@ -66,42 +65,59 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/prom_img5.png" alt="">
+                        <img src="assets/img/prom_img3.jpg" alt="">
                     </div>
                     
                     <div>
-                        <p class="about__text">
-                            This project involves developing a Facial Mask Detector using advanced computer vision techniques. Leveraging Convolutional Neural Networks (CNNs), the system is trained to accurately identify whether individuals are wearing facial masks or not in real-time.                                 
-                        </p>                        
-                    </div>
+                        <p class="about__text">                        
+                            This project focuses on predicting stock prices using advanced machine learning models like a combination off Convolutional Neural Networks (CNN) with Bidirectional Long Short-Term Memory (biLSTM) and Bidirectional Gated Recurrent Units (biGRU).
+                            <br><br>
+                            By leveraging historical stock data, the models aim to provide accurate predictions that can help investors make informed decisions. The use of LSTM and GRU is particularly effective in capturing temporal dependencies and patterns in stock prices.
+                        </p>
+                    </div>                                   
+                </div>
             </section>
 
             <section class="about section " id="technicalInformation">
                 <h2 class="section-title">Technical Information</h2>
 
                 <div class="about__container bd-grid">
-  
-                    
                     <div>
                         <p class="about__text">
-                            The model is fine-tuned with a dataset containing various images of people with and without masks, ensuring robustness in diverse environments and lighting conditions.
+                            This project employs <span class="home__title-color">CNN-biLSTM</span> and <span class="home__title-color">CNN-biGRU</span> neural networks, which are types of Recurrent Neural Networks (RNNs) combined to Convolutional Neural Networks (CNN) designed to handle sequence data effectively.
                             <br><br>
-                            Implemented in <span class="home__title-color">Python</span>, the project utilizes <span class="home__title-color">TensorFlow</span> and <span class="home__title-color">Keras</span> for building and training the CNN models, while <span class="home__title-color">OpenCV</span> is used for real-time image processing and camera integration. The solution provides accurate mask detection with high precision, contributing to public health efforts by ensuring compliance with mask-wearing guidelines in various settings.
+                            This project is implemented in <span class="home__title-color">Python</span> and utilizes powerful libraries such as <span class="home__title-color">Pandas</span> for data manipulation, <span class="home__title-color">NumPy</span> for numerical operations, and <span class="home__title-color">Matplotlib</span> for visualization.
                         </p>
                     </div>                                                      
                     <div class="about__img2">
-                        <image src="assets/img/prom_img6.png"></image>    
+                        <img src="assets/img/cnn_bigru.png" alt="">
+                        <br>
+                        <img src="assets/img/cnn_bilstm.png" alt="">
                     </div>  
                 </div>
                 
             </section>
 
             <section class="about section " id="video">
-                <h2 class="section-title"> Be Safe </h2>
+                <h2 class="section-title">Predicting Future Trends</h2>
             </section>
             
 
-            <!--===== CONTACT =====-->  
+            <!--===== CONTACT =====-->
+            <!--
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Enviar" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+            -->
         </main>
 
         <!--===== FOOTER =====-->
