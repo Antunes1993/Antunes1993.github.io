@@ -1,198 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <title>Leonardo Antunes dos Santos </title>
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Leonardo Antunes</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/code.svg"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
+
+        <!--flaticon.css-->
+		<link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/customized_style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                     <img src="assets/img/code.svg" alt="Welcome GIF" class="home__gif" style="width: 30px;">
-                </div>
+	
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    </ul>
-                </div>
+	<body>
+		<!--welcome-hero start -->
+		<section id="home" class="	">
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+			<!-- top-area Start -->
+			<div class="top-area">
+				<div class="header-area">
+					<!-- Start Navigation -->
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hello,<br><span class="home__title-color">Welcome</span><br>to My Programming Portfolio</h1>
-                    <p class="home__description" style="font-size: 20px;">I am an experienced Software Developer ready to bring your ideas to life. Explore my projects, learn about my skills, and let's create something amazing together.</p>
-                    <br><br>
-                    <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/Antunes1993" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-            </section>
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h1 class="section-title">About</h1>
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/perfil3.png" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Leonardo</h2>
-                        <p class="about__text" style="font-size: 18px;"> Below is some summary information about my qualifications and knowledge.</p>
-                            <br/>
-                            <ul style="font-size: 18px;">
-                                <li>💼 Web Development with Django/HTML/CSS/JS</li>
-                                <li>💼 Machine Learning applied to prediction</li>
-                                <li>💼 Mining Digitalization with COMOS</li>
-                            </ul>                         
-                            <br>
-                            <ul style="font-size: 18px;">
-                                <li>📚 Control and Automation Engineering at CEFET/RJ</li>
-                                <li>📚 MBA in Computer Engineering at UFRJ</li>
-                                <li>📚 MBA in Data Science at USP-Esalq</li>
-                            <br>   
-                            <li style="font-size: 18px;"> ♟️ Topics of Interest 
-                                <ul style="font-size: 18px;">        
-                                   <li>  Computer Vision </li>
-                                   <li>  Machine Learning & Deep Learning </li>         
-                                   <li>  Quantitative Finances </li>         
-                                </ul>
-                            </li>                                                       
-                    </div>                                   
-                </div>
-            </section>
+				        <div class="container">
 
-            
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Projects</h2>
-                
-                <h2 class="section-title"> Data Science and Analytics </h2>
-                <div class="work__container bd-grid" >
-                    <a class="work__img" href="ds_project01.html">
-                        <br/>
-                        <p style="text-align:center; font-size: 22px;"> Technical Analysis <br> with SMA and EMA </p>
-                        <img src="assets/img/invest.jpg" alt="">
-                    </a>   
-                    <a class="work__img" href="ds_project02.html">
-                        <br/>
-                        <p style="text-align:center; font-size: 22px;"> Technical Analysis <br> with Momentum </p>
-                        <br><br>
-                        <img src="assets/img/invest1.png" style="width: 80%;" alt="">
-                    </a>   
-                    <a class="work__img" href="ds_project03.html">
-                        <br>
-                        <p style="text-align:center; font-size: 22px;"> Stock Price Prediction with <br> LSTM and GRU </p>
-                        <br>
-                        <img src="assets/img/invest2.png" style="width: 90%;" alt="">
-                    </a>
-                    <a class="work__img" href="ds_project04.html">
-                        <br/>
-                        <p style="text-align:center; font-size: 22px;"> Stock Price Prediction with <br> CNN-BiLSTM and CNN-BiGRU </p>
-                        <br><br>
-                        <img src="assets/img/invest3.jpg" style="width: 300%;" alt="">
-                    </a>
-                    <a class="work__img" href="ds_project05.html">
-                        <br/>
-                        <p style="text-align:center; font-size: 22px;"> Stock Price Prediction with <br> Text-Sentiment Analysis </p>
-                        <br><br>
-                        <img src="assets/img/invest4.png" style="width: 90%;" alt="">
-                    </a>
-                    <a class="work__img" href="ds_project06.html">
-                        <br/>
-                        <p style="text-align:center; font-size: 22px;"> Backtesting <br> tools </p>
-                        <img src="assets/img/invest5.png" alt="">
-                    </a>              
-                </div>
+				            <!-- Start Header Navigation -->
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				                    <i class="fa fa-bars"></i>
+				                </button>			                
 
-                <br><br><br>
-                <h2 class="section-title"> Computer Vision </h2>
+				            </div><!--/.navbar-header-->
+				            <!-- End Header Navigation -->
 
-                <div class="work__container bd-grid" >
+				            <!-- Collect the nav links, forms, and other content for toggling -->
+				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+				                    <li class=" scroll active"><a href="#home">home</a></li>
+				                    <li class="scroll"><a href="#skillset">skillset</a></li>									
+									<li class="scroll"><a href="#academic_formation">academic formation</a></li>
+									<li class="scroll"><a href="#projects">projects</a></li>
+									<li class="scroll"><a href="#work_experience">work experience</a></li>
+									
+				                    
+				                </ul><!--/.nav -->
+				            </div><!-- /.navbar-collapse -->
+				        </div><!--/.container-->
+				    </nav><!--/nav-->
+				    <!-- End Navigation -->
+				</div><!--/.header-area-->
+			    <div class="clearfix"></div>
 
-                    <a class="work__img" href="project01.html">
-                        <p style="text-align:center; font-size: 22px;" > Parking Spaces Detection </p>
-                        <br><br>
-                        <img src="assets/img/parkspaceicon.jpg" alt="">
-                    </a>
-                    
-                    <a class="work__img" href="project02.html">
-                        <p style="text-align:center; font-size: 22px;"> Joint monitoring to trigger devices </p>                        
-                        <img src="assets/img/hand_monitoring.png" styles="width=200px;"  alt="">
-                    </a>
+			</div><!-- /.top-area-->
+			<!-- top-area End -->
 
-                    <a class="work__img" href="project06.html">
-                        <p style="text-align:center; font-size: 22px;"> Facial Mask Detector </p>
-                        <br><br>
-                        <img src="assets/img/facial_mask_detector.png" alt="">
-                    </a>
-                    
-                    <a class="work__img" href="project03.html">
-                        <p style="text-align:center; font-size: 22px;"> Sleep and Loss Focus Detector </p>
-                        <br><br>
-                        <img src="assets/img/sleeping.png" alt="">
-                    </a>
-                    
-                    
-                    <a class="work__img" href="project05.html">
-                        <p style="text-align:center; font-size: 22px;"> Optical Character Recognition </p>
-                        <img src="assets/img/ocr2.png" style="align-items:center" alt="">
-                    </a>
+			<!-- Welcome Section Start -->		
+			<div class="container">
+				<video autoplay muted loop class="background-video" style="height: 100%;" >
+					<source src="assets/video/1.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<div class="welcome-hero-txt">
+					<h2>Leonardo Antunes</h2>					
+					<p style="font-size: 22px;">
+						Hi, and welcome to my personal portfolio. <br> Check below my past experience with fullstack development. 
+					</p>
+					<button class="welcome-btn" onclick="window.location.href='https://wa.me/5521997007066?text=Hello,%20I%20would%20like%20to%20get%20more%20information%20about%20your%20services.'">
+						Contact me
+					</button>
+				</div>
+			</div>
+		</section>
+		
+		<!-- ============================================= SKILLSET ============================================== -->
+		<section id="skillset" class="new-cars" style="background-color: white;">
+			<div class="container">
+				<div class="row" style="margin-top: 40px;">
+					<div class="col-lg-12">
+						<div class="single-featured-cars" style="
+							padding: 30px;
+							border-radius: 12px;
+							box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15); /* Royal blue shadow */
+							background-color: #ffffff;
+							border: 2px solid #4169e1;">
+							<div class="featured-cars-txt">
+								<h2 style="text-align: center; margin-bottom: 20px; color: #4169e1;">Skillset Overview</h2>
+								<table style="
+									width: 100%;
+									font-size: 16px;
+									border-collapse: collapse;
+									border: 1px solid #dcdcdc;
+									border-radius: 8px;
+									overflow: hidden;">
+									<tbody>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; width: 30%; background-color: #f0f8ff;">Programming Languages</td>
+											<td style="padding: 12px;">Python, C#, JavaScript, VBScript</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Frameworks & Libraries</td>
+											<td style="padding: 12px;">Django, .NET Framework, Bootstrap, Sass, Streamlit</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Front-End Technologies</td>
+											<td style="padding: 12px;">HTML, CSS, JavaScript</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Databases</td>
+											<td style="padding: 12px;">MySQL, PostgreSQL, SQL Server</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Data Science & Machine Learning</td>
+											<td style="padding: 12px;">
+												Data Treatment with Pandas and Polars, Scikit-Learn, TensorFlow, NLP (tokenization, count vector, stemming),
+												Supervised & Unsupervised Learning, Recurrent Neural Networks (RNN), LSTM, Computer Vision algorithms
+											</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Web Development</td>
+											<td style="padding: 12px;">REST APIs and WebSockets</td>
+										</tr>
+										<tr style="border-bottom: 1px solid #ccc;">
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">DevOps & Cloud</td>
+											<td style="padding: 12px;">Azure Virtual Machines, Databases and Web Apps, GitHub Actions</td>
+										</tr>
+										<tr>
+											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Project Management</td>
+											<td style="padding: 12px;">Agile Methodologies, Microsoft Project, Requirements Analysis, Documentation, Team Collaboration, Azure Cost Management</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>
+		</section>
+		<!-- ============================================= ACADEMIC FORMATION ============================================== -->
+		<section id="academic_formation" class="work-experience" style="margin-top: 40px;">
+			<div class="container">
+			  <div>
+				
+				<div class="section-header" style="text-align: center; margin-bottom: 30px;">
+				  <h2>Academic Formation</h2>
+				</div>
+				<div class="row" style="margin-top: 40px;">
+					<div class="col-lg-12">
+					  <div style="
+						padding: 30px;
+						border-radius: 12px;
+						box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15);
+						background-color: #ffffff;
+						border: 2px solid #4169e1;">			  
+						<div class="timeline">					
+							<div class="timeline-item left">
+							<div class="content">
+								<h4>Bachelor Automation Engineering</h4>
+								<p style="font-size: 14px; color:blue;">CEFET/RJ - Brasil</p>
+								<p style="font-size: 14px; color:blue;">2014 - 2019</p>
+								<div class="divider"></div>
+							</div>
+							</div>
+					
+							<div class="timeline-item right">
+							<div class="circle">
+								<i class="fas fa-laptop-code"></i>
+							</div>
+							<div class="content">
+								<h4>MBA Computer Engineering</h4>
+								<p style="font-size: 14px; color:blue;">COPPE-UFRJ - Brasil</p>
+								<p style="font-size: 14px; color:blue;">2020 - 2022</p>
+								<div class="divider"></div>
+							</div>
+							</div>
+					
+							<div class="timeline-item left">
+							<div class="circle">
+								<i class="fas fa-laptop-code"></i>
+							</div>
+							<div class="content">
+								<h4>MBA Data Science and Analytics</h4>
+								<p style="font-size: 14px; color:blue;">USP-Esalq - Brasil</p>
+								<p style="font-size: 14px; color:blue;">2022 - 2024</p>
+								<div class="divider"></div>
+							</div>
+							</div>
+					
+							<div class="timeline-item right">
+							<div class="circle">
+								<i class="fas fa-laptop-code"></i>
+							</div>
+							<div class="content">
+								<h4>Master in Computer Science</h4>
+								<p style="font-size: 14px; color:blue;">CEFET/RJ - Brasil</p>
+								<p style="font-size: 14px; color:blue;">2025 - #</p>
+								<div class="divider"></div>
+							</div>
+							</div>
+					
+						</div>
+					</div>
+				</div>	
+			  </div>
+			</div>
+		  </section>
+		<!-- ============================================= PAST PROJECTS ============================================== -->
+		<section id="projects" class="new-cars" style="background-color: white;">
+			<div class="container">
+				<div class="section-header">					
+					<h2 style="font-weight: bold;">Check these Projects!</h2>
+				</div>
+				<div class="featured-cars-content">
+					<!--================================== DATA SCIENCE PROJECTS ======================================== -->					
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_001.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1 style="text-align: center"><a href="#">Investify <span></span></a></h2>									
+									<p style="font-size: 16px;">
+										<br/>
+										Financial web platform designed to support investment decision-making in the Brazilian and U.S. stock markets.
+										<br/><br/>										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_002.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1 style="text-align: center"><a href="#">Stock Market Analysis<span></span></a></h1>
+									<p style="font-size: 16px;">
+										<br/>
+										Technical Analysis with SMA, EMA and Momentum indicators for the Brazilian and U.S. stock markets.
+										<br/><br/> 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img">
+										<img src="assets/logo/Logo_003.png" alt="cars" style="width: 40%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1 style="text-align: center"><a href="#">Stock Price Prediction</a></h1>
+									<p style="font-size: 16px;">
+										<br/>
+										Stock market Price Prediction using Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) models.
+										<br/><br/>
+									</p>
+								</div>
+							</div>
+						</div>						
+					</div>
 
-                    <a class="work__img" href="project04.html">
-                        <p style="text-align:center; font-size: 22px;"> Workout Performance Monitor </p>
-                        <img src="assets/img/workout_icon.jpg" alt="">
-                    </a>       
-                </div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_004.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1><a href="#">Back-testing Tools <span></span></a></h2>									
+									<p style="font-size: 16px;">
+										<br/>
+										Tools for back-testing trading strategies in the Brazilian and U.S. stock markets.
+										<br/><br/>										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_005.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1><a href="#">Financial Chatbot<span></span></a></h1>
+									<p style="font-size: 16px;">
+									<br/>
+										Chatbot using Natural Language Processing (NLP) techniques to assist users in financial planning.										<br/><br/> 
+									</p>
+								</div>
+							</div>
+						</div>							
+					</div>
+					<!--================================== COMPUTER VISION PROJECTS ====================================== -->
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_006.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1><a href="#">Parking Spaces Detection <span></span></a></h2>									
+									<p style="font-size: 16px;">
+										<br/>
+										Detection of parking spaces using computer vision techniques to optimize parking management.
+										<br/><br/>										
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_007.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1><a href="#">Joint Monitoring<span></span></a></h1>
+									<p style="font-size: 16px;">
+										<br/>
+										Joint monitoring with computer vision techniques to enhance the safety and efficiency of industrial processes.
+										<br/><br/> 
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-featured-cars">
+								<div class="featured-img-box">
+									<div class="featured-cars-img" style="max-width: 100%;">
+										<img src="assets/logo/Logo_008.png" alt="cars" style="width: 60%; height: auto;">
+									</div>
+									<div class="featured-model-info">
+										<button class="welcome-btn new-cars-btn">
+											Check it out 🖱️
+										</button>
+									</div>
+								</div>
+								<div class="featured-cars-txt">
+									<h1><a href="#">BodyBuilding Monitor
+										<span></span></a></h2>									
+									<p style="font-size: 16px;">
+										<br/>
+										Bodybuilding monitor using computer vision techniques to enhance training performance and safety.
+										<br/><br/>										
+									</p>
+								</div>
+							</div>
+						</div>						
+					</div>								
+				</div>
+			</div>
+		</section>	
+		<!-- ============================================= WORK EXPERIENCE ============================================== -->
+		<section id="work_experience" class="work-experience">
+			<div class="container">
+			  <div class="section-header">
+				<h2>Work Experience</h2>
+			  </div>
+			  <div class="row" style="margin-top: 40px;">
+				<div class="col-lg-12">
+				  <div style="
+					padding: 30px;
+					border-radius: 12px;
+					box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15);
+					background-color: #ffffff;
+					border: 2px solid #4169e1;">		  
+					<div class="timeline">
+					  <div class="timeline-item left">
+						<div class="content">
+						  <h3>2023 - Present</h3>
+						  <p style="font-size: 12px; color:blue;">Fullstack Developer / Data Scientist / COMOS Implementation Consultant at Innomotics - Chile</p>  
+						  <div class="divider"></div>
+						</div>
+					  </div>
+			  
+					  <div class="timeline-item right">
+						<div class="circle">
+						  <i class="fas fa-laptop-code"></i>
+						</div>
+						<div class="content">
+						  <h3>2017 - 2023</h3>
+						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Consultant at Siemens - Brasil</p>
+						  <div class="divider"></div>
+						</div>
+					  </div>
+			  
+					  <div class="timeline-item right">
+						<div class="circle">
+						  <i class="fas fa-laptop-code"></i>
+						</div>
+						<div class="content">
+						  <h3>2019 - 2021</h3>
+						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Analyst at Siemens - Brasil</p>
+						  <div class="divider"></div>
+						</div>
+					  </div>
+			  
+					  <div class="timeline-item right">
+						<div class="circle">
+						  <i class="fas fa-laptop-code"></i>
+						</div>
+						<div class="content">
+						  <h3>2017 - 2019</h3>
+						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Intern at Siemens - Brasil</p>
+						  <div class="divider"></div>
+						</div>
+					  </div>
+			  
+					  <div class="timeline-item left">
+						<div class="content">
+						  <h3>2016 - 2018</h3>
+						  <p style="font-size: 12px; color:blue;">Sales Engineer Intern at Bosch Rexroth - Brasil</p>
+						</div>
+					  </div>
+			  
+					  <div class="timeline-item right">
+						<div class="content">
+						  <h3>2014 - 2016</h3>
+						  <p style="font-size: 12px; color:blue;">Automation Engineer Intern at Bombardier Transport - Brasil</p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</section>
+		<!--contact start-->
+		<footer id="contact"  class="contact">
+			<div class="container">
+				<div class="footer-copyright">
+					<div class="row">
+						<div class="col-sm-6">
+							<p>
+								&copy; copyright.designed and developed by <a href="https://www.themesine.com/">Leonardo</a>.
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-social">							
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-whatsapp"></i></a>								
+							</div>
+						</div>
+					</div>
+				</div><!--/.footer-copyright-->
+			</div><!--/.container-->
 
-                <br><br><br>
-                <h2 class="section-title"> Web Apps </h2>
-
-                <div class="work__container bd-grid" >
-
-                    <a class="work__img" href="app_project01.html">
-                        <p style="text-align:center; font-size: 22px;" > Youtube Download Video and Music </p>
-                        <br>
-                        <img src="assets/img/youtube.png" alt="">
-                        <br>
-                    </a>
-                </div>
-            </section>
-            <br><br>
-            <br><br>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Leonardo</p>
-            <div class="footer__social">
-                <a href="https://www.linkedin.com/in/leonardo-antunes-dos-santos-b37372a7/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="whatsapp://send?abid=+5521997007066&text=Olá%2C%20Gostaria de saber um pouco mais sobre os projetos anunciados." class="footer__icon"><i class='bx bxl-whatsapp' ></i></a>
-                <a href="https://github.com/Antunes1993" class="footer__icon"><i class='bx bxl-github' ></i></a>
-            </div>
-        </footer>
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.contact-->
+		<!--contact end-->
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+		<!--owl.carousel.js-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!--Custom JS-->
+        <script src="assets/js/custom.js"></script>
+        
     </body>
+	
 </html>
