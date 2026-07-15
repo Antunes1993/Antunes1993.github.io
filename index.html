@@ -1,590 +1,418 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Antunes — Fullstack Developer & Data Scientist for Heavy Industry</title>
+<meta name="description" content="Senior fullstack developer and data scientist building production AI for mining and industrial plants: predictive maintenance, anomaly detection, digital twins, document intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F2;
+    --ink:#1C2430;
+    --line:#2E5EAA;      /* drawing-line blue */
+    --copper:#B4652A;    /* copper accent */
+    --muted:#5D6673;
+    --rule:#D8D5CC;
+    --card:#FFFFFF;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    background-image:
+      linear-gradient(var(--rule) 1px, transparent 1px),
+      linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+    background-size:48px 48px;
+    background-attachment:fixed;
+    line-height:1.6;
+  }
+  a{color:var(--line);text-decoration:none}
+  a:hover{text-decoration:underline}
+  a:focus-visible, button:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(247,246,242,.92);backdrop-filter:blur(6px);
+    border-bottom:2px solid var(--ink);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .nav-brand{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:14px;color:var(--ink);letter-spacing:.04em}
+  .nav-links{display:flex;gap:22px;list-style:none}
+  .nav-links a{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);text-transform:lowercase}
+  .nav-links a:hover{color:var(--copper);text-decoration:none}
+  @media(max-width:640px){.nav-links{gap:14px}.nav-links li:nth-child(n+4){display:none}}
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  /* ---------- hero: engineering title block ---------- */
+  header{padding:72px 0 56px}
+  .titleblock{
+    border:2px solid var(--ink);
+    background:var(--card);
+    box-shadow:8px 8px 0 rgba(28,36,48,.12);
+  }
+  .tb-row{display:grid;border-bottom:2px solid var(--ink)}
+  .tb-row:last-child{border-bottom:none}
+  .tb-main{grid-template-columns:1fr}
+  .tb-main .cell{padding:36px 32px}
+  .tb-meta{grid-template-columns:repeat(4,1fr)}
+  .tb-meta .cell{padding:14px 18px;border-right:1px solid var(--rule)}
+  .tb-meta .cell:last-child{border-right:none}
+  .cell-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+  .cell-value{font-size:14px;font-weight:500}
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(30px,5vw,50px);
+    line-height:1.08;letter-spacing:-.015em;font-weight:700;
+  }
+  h1 .accent{color:var(--copper)}
+  .hero-sub{margin-top:16px;max-width:640px;font-size:17px;color:var(--muted)}
+  .hero-actions{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:11px 22px;border:2px solid var(--ink);
+    font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+    background:var(--ink);color:var(--paper);transition:transform .12s ease;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--copper);text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  @media(max-width:720px){.tb-meta{grid-template-columns:repeat(2,1fr)}.tb-meta .cell:nth-child(2){border-right:none}}
 
-		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>Leonardo Antunes</title>
+  /* ---------- sections ---------- */
+  section{padding:56px 0}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+  .sec-head h2{font-family:'Space Grotesk',sans-serif;font-size:26px;letter-spacing:-.01em}
+  .sec-head .sec-no{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--copper);letter-spacing:.1em}
+  .sec-note{font-size:14px;color:var(--muted);margin:-22px 0 30px;max-width:720px}
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/code.svg"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  /* ---------- project cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{
+    border:2px solid var(--ink);background:var(--card);
+    display:flex;flex-direction:column;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 rgba(46,94,170,.25)}
+  .card-tag{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--copper);
+    border-bottom:1px solid var(--rule);padding:10px 20px;
+  }
+  .card-body{padding:20px 20px 22px;flex:1;display:flex;flex-direction:column}
+  .card h3{font-family:'Space Grotesk',sans-serif;font-size:19px;margin-bottom:10px}
+  .card p{font-size:14.5px;color:var(--muted);flex:1}
+  .stack{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    border:1px solid var(--rule);padding:3px 9px;color:var(--ink);background:var(--paper);
+  }
 
-        <!--linear icon css-->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
+  /* ---------- lab (small cards) ---------- */
+  .lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:820px){.lab-grid{grid-template-columns:1fr}}
+  .lab-card{border:1px solid var(--ink);background:var(--card);padding:18px 20px}
+  .lab-card h3{font-family:'Space Grotesk',sans-serif;font-size:16px;margin-bottom:6px}
+  .lab-card p{font-size:13.5px;color:var(--muted)}
+  .lab-card .mono{font-size:11px;color:var(--copper);display:block;margin-top:10px}
 
-        <!--flaticon.css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
+  /* ---------- experience timeline ---------- */
+  .xp{border-left:2px solid var(--ink);padding-left:28px;position:relative}
+  .xp-item{position:relative;padding-bottom:34px}
+  .xp-item:last-child{padding-bottom:0}
+  .xp-item::before{
+    content:"";position:absolute;left:-35px;top:6px;width:12px;height:12px;
+    background:var(--paper);border:2px solid var(--ink);
+  }
+  .xp-item.current::before{background:var(--copper);border-color:var(--copper)}
+  .xp-dates{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--copper);letter-spacing:.06em}
+  .xp-item h3{font-family:'Space Grotesk',sans-serif;font-size:18px;margin:2px 0}
+  .xp-org{font-size:14px;color:var(--muted)}
+  .xp-item ul{margin:10px 0 0 18px;font-size:14.5px;color:var(--muted)}
+  .xp-item li{margin-bottom:5px}
 
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+  /* ---------- skills legend ---------- */
+  .legend{border:2px solid var(--ink);background:var(--card)}
+  .legend-row{display:grid;grid-template-columns:220px 1fr;border-bottom:1px solid var(--rule)}
+  .legend-row:last-child{border-bottom:none}
+  .legend-key{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;
+    padding:14px 18px;border-right:1px solid var(--rule);color:var(--copper);
+    display:flex;align-items:center;
+  }
+  .legend-val{padding:14px 18px;font-size:14.5px}
+  @media(max-width:640px){.legend-row{grid-template-columns:1fr}.legend-key{border-right:none;padding-bottom:2px}}
 
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-		<link rel="stylesheet" href="assets/css/customized_style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-    </head>
-	
+  /* ---------- education ---------- */
+  .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media(max-width:720px){.edu-grid{grid-template-columns:1fr}}
+  .edu{border:1px solid var(--ink);background:var(--card);padding:18px 20px}
+  .edu .mono{font-size:11px;color:var(--copper)}
+  .edu h3{font-family:'Space Grotesk',sans-serif;font-size:16px;margin:4px 0 2px}
+  .edu p{font-size:13.5px;color:var(--muted)}
 
-	<body>
-		<!--welcome-hero start -->
-		<section id="home" class="	">
+  .pub{border:2px solid var(--ink);background:var(--card);padding:20px 24px;margin-top:26px}
+  .pub .mono{font-size:11px;color:var(--copper);letter-spacing:.12em}
+  .pub h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin-top:4px}
 
-			<!-- top-area Start -->
-			<div class="top-area">
-				<div class="header-area">
-					<!-- Start Navigation -->
-				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+  /* ---------- footer / contact ---------- */
+  footer{border-top:2px solid var(--ink);padding:56px 0 64px;background:var(--card)}
+  footer h2{font-family:'Space Grotesk',sans-serif;font-size:28px;margin-bottom:10px}
+  .contact-line{font-size:16px;color:var(--muted);max-width:560px}
+  .contact-links{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
+  .foot-meta{margin-top:44px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
 
-				        <div class="container">
+<nav>
+  <div class="wrap nav-inner">
+    <span class="nav-brand">L.ANTUNES / PORTFOLIO</span>
+    <ul class="nav-links">
+      <li><a href="#work">work</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-				            <!-- Start Header Navigation -->
-				            <div class="navbar-header">
-				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-				                    <i class="fa fa-bars"></i>
-				                </button>			                
+<header>
+  <div class="wrap">
+    <div class="titleblock">
+      <div class="tb-row tb-main">
+        <div class="cell">
+          <h1>I build production AI and fullstack systems for <span class="accent">heavy industry</span>.</h1>
+          <p class="hero-sub">Predictive maintenance, anomaly detection, digital twins and document intelligence for mining operations — from the ML model to the web application engineers actually use.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#work">See the work</a>
+            <a class="btn ghost" href="mailto:antunesleonardo12@gmail.com">Get in touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="tb-row tb-meta">
+        <div class="cell"><span class="cell-label">Name</span><span class="cell-value">Leonardo Antunes dos Santos</span></div>
+        <div class="cell"><span class="cell-label">Role</span><span class="cell-value">Senior Fullstack Dev / Data Scientist</span></div>
+        <div class="cell"><span class="cell-label">Base</span><span class="cell-value">Brazil · Remote (EMEA/Americas)</span></div>
+        <div class="cell"><span class="cell-label">Languages</span><span class="cell-value">PT · EN · ES · DE</span></div>
+      </div>
+    </div>
+  </div>
+</header>
 
-				            </div><!--/.navbar-header-->
-				            <!-- End Header Navigation -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no mono">SHT-01</span><h2>Selected industrial work</h2></div>
+    <p class="sec-note">Systems built for Innomotics and Siemens clients in copper mining, chemicals and pulp &amp; paper. Code is proprietary, so each case is described as problem → approach → stack.</p>
+    <div class="grid">
 
-				            <!-- Collect the nav links, forms, and other content for toggling -->
-				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-				                    <li class=" scroll active"><a href="#home">home</a></li>
-				                    <li class="scroll"><a href="#skillset">skillset</a></li>									
-									<li class="scroll"><a href="#academic_formation">academic formation</a></li>
-									<li class="scroll"><a href="#projects">projects</a></li>
-									<li class="scroll"><a href="#work_experience">work experience</a></li>
-									
-				                    
-				                </ul><!--/.nav -->
-				            </div><!-- /.navbar-collapse -->
-				        </div><!--/.container-->
-				    </nav><!--/nav-->
-				    <!-- End Navigation -->
-				</div><!--/.header-area-->
-			    <div class="clearfix"></div>
+      <article class="card">
+        <div class="card-tag">Predictive maintenance · Innomotics</div>
+        <div class="card-body">
+          <h3>Equipment failure forecasting</h3>
+          <p>PCA and clustering models that group mining-equipment components by behavior, feeding predictive-maintenance strategies and failure forecasting. Failure occurrence over time modeled with Non-Homogeneous Poisson Processes (NHPP).</p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">NHPP</span><span class="chip">PostgreSQL</span><span class="chip">Azure</span>
+          </div>
+        </div>
+      </article>
 
-			</div><!-- /.top-area-->
-			<!-- top-area End -->
+      <article class="card">
+        <div class="card-tag">Process monitoring · Innomotics</div>
+        <div class="card-body">
+          <h3>Real-time anomaly detection</h3>
+          <p>Statistical anomaly detection for mining processes using Wasserstein distance and PELT change-point detection, surfaced to operators through a Django + Vue application — catching drifts before they become downtime.</p>
+          <div class="stack">
+            <span class="chip">Wasserstein</span><span class="chip">PELT</span><span class="chip">TimescaleDB</span><span class="chip">Django</span><span class="chip">Vue.js</span>
+          </div>
+        </div>
+      </article>
 
-			<!-- Welcome Section Start -->		
-			<div class="container">
-				<video autoplay muted loop class="background-video" style="height: 100%;" >
-					<source src="assets/video/1.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<div class="welcome-hero-txt">
-					<h2>Leonardo Antunes</h2>					
-					<p style="font-size: 22px;">
-						Hi, and welcome to my personal portfolio. <br> Check below my past experience with fullstack development. 
-					</p>
-					<button class="welcome-btn" onclick="window.location.href='https://wa.me/5521997007066?text=Hello,%20I%20would%20like%20to%20get%20more%20information%20about%20your%20services.'">
-						Contact me
-					</button>
-				</div>
-			</div>
-		</section>
-		
-		<!-- ============================================= SKILLSET ============================================== -->
-		<section id="skillset" class="new-cars" style="background-color: white;">
-			<div class="container">
-				<div class="row" style="margin-top: 40px;">
-					<div class="col-lg-12">
-						<div class="single-featured-cars" style="
-							padding: 30px;
-							border-radius: 12px;
-							box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15); /* Royal blue shadow */
-							background-color: #ffffff;
-							border: 2px solid #4169e1;">
-							<div class="featured-cars-txt">
-								<h2 style="text-align: center; margin-bottom: 20px; color: #4169e1;">Skillset Overview</h2>
-								<table style="
-									width: 100%;
-									font-size: 16px;
-									border-collapse: collapse;
-									border: 1px solid #dcdcdc;
-									border-radius: 8px;
-									overflow: hidden;">
-									<tbody>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Programming Languages</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">Python, C#, JavaScript, VBScript</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Frameworks & Libraries</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">Django, .NET Framework, Bootstrap, Sass, Streamlit</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Front-End Technologies</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">HTML, CSS, JavaScript</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Databases</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">MySQL, PostgreSQL, SQL Server</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Data Science & Machine Learning</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">
-												Data Treatment with Pandas and Polars, Scikit-Learn, TensorFlow, NLP (tokenization, count vector, stemming),
-												Supervised & Unsupervised Learning, Recurrent Neural Networks (RNN), LSTM, Computer Vision algorithms
-											</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Web Development</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">REST APIs and WebSockets</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">DevOps & Cloud</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">Azure Virtual Machines, Databases and Web Apps, GitHub Actions</td>
-										</tr>
-										<tr style="border-bottom: 1px solid #ccc;">
-											<td style="padding: 12px; font-weight: bold; background-color: #f0f8ff;">Project Management</td>
-										</tr>
-										<tr>
-											<td style="padding: 12px; background-color: white;">Agile Methodologies, Microsoft Project, Requirements Analysis, Documentation, Team Collaboration, Azure Cost Management</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>					
-			</div>
-		</section>
-		<!-- ============================================= ACADEMIC FORMATION ============================================== -->
-		<section id="academic_formation" class="work-experience" style="margin-top: 40px;">
-			<div class="container">
-			  <div>
-				
-				<div class="section-header" style="text-align: center; margin-bottom: 30px;">
-				  <h2>Academic Formation</h2>
-				</div>
-				<div class="row" style="margin-top: 40px;">
-					<div class="col-lg-12">
-					  <div style="
-						padding: 10px;
-						border-radius: 12px;
-						box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15);
-						background-color: #ffffff;
-						border: 2px solid #4169e1;">			  
-						<div class="timeline">					
-							<div class="timeline-item left">
-							<div class="content">
-								<h4>Bachelor Automation Engineering</h4>
-								<p style="font-size: 14px; color:blue;">CEFET/RJ - Brasil</p>
-								<p style="font-size: 14px; color:blue;">2014 - 2019</p>
-								<div class="divider"></div>
-							</div>
-							</div>
-					
-							<div class="timeline-item right">
-							<div class="circle">
-								<i class="fas fa-laptop-code"></i>
-							</div>
-							<div class="content">
-								<h4>MBA Computer Engineering</h4>
-								<p style="font-size: 14px; color:blue;">COPPE-UFRJ - Brasil</p>
-								<p style="font-size: 14px; color:blue;">2020 - 2022</p>
-								<div class="divider"></div>
-							</div>
-							</div>
-					
-							<div class="timeline-item left">
-							<div class="circle">
-								<i class="fas fa-laptop-code"></i>
-							</div>
-							<div class="content">
-								<h4>MBA Data Science and Analytics</h4>
-								<p style="font-size: 14px; color:blue;">USP-Esalq - Brasil</p>
-								<p style="font-size: 14px; color:blue;">2022 - 2024</p>
-								<div class="divider"></div>
-							</div>
-							</div>
-					
-							<div class="timeline-item right">
-							<div class="circle">
-								<i class="fas fa-laptop-code"></i>
-							</div>
-							<div class="content">
-								<h4>Master in Computer Science</h4>
-								<p style="font-size: 14px; color:blue;">CEFET/RJ - Brasil</p>
-								<p style="font-size: 14px; color:blue;">2025 - #</p>
-								<div class="divider"></div>
-							</div>
-							</div>
-					
-						</div>
-					</div>
-				</div>	
-			  </div>
-			</div>
-		  </section>
-		<!-- ============================================= PAST PROJECTS ============================================== -->
-		<section id="projects" class="new-cars" style="background-color: white;">
-			<div class="container">
-				<div class="section-header">					
-					<h2 style="font-weight: bold;">Check these Projects!</h2>
-				</div>
-				<div class="featured-cars-content">
-					<!--================================== DATA SCIENCE PROJECTS ======================================== -->					
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_001.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1 style="text-align: center"><a href="#">Investify <span></span></a></h2>									
-									<p style="font-size: 16px;">
-										<br/>
-										Financial web platform designed to support investment decision-making in the Brazilian and U.S. stock markets.
-										<br/><br/>										
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_002.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1 style="text-align: center"><a href="#">Stock Market Analysis<span></span></a></h1>
-									<p style="font-size: 16px;">
-										<br/>
-										Technical Analysis with SMA, EMA and Momentum indicators for the Brazilian and U.S. stock markets.
-										<br/><br/> 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/logo/Logo_003.png" alt="cars" style="width: 40%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1 style="text-align: center"><a href="#">Stock Price Prediction</a></h1>
-									<p style="font-size: 16px;">
-										<br/>
-										Stock market Price Prediction using Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) models.
-										<br/><br/>
-									</p>
-								</div>
-							</div>
-						</div>						
-					</div>
+      <article class="card">
+        <div class="card-tag">Digital twin · Innomotics</div>
+        <div class="card-body">
+          <h3>What-if simulation for copper mining</h3>
+          <p>Digital Twin prototypes that simulate copper-mining process scenarios, with virtual signal generation and integration into real-time monitoring — letting engineers test decisions before touching the plant.</p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">WebSockets</span><span class="chip">Vue.js</span><span class="chip">Docker</span>
+          </div>
+        </div>
+      </article>
 
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_004.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1><a href="#">Back-testing Tools <span></span></a></h2>									
-									<p style="font-size: 16px;">
-										<br/>
-										Tools for back-testing trading strategies in the Brazilian and U.S. stock markets.
-										<br/><br/>										
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_005.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1><a href="#">Financial Chatbot<span></span></a></h1>
-									<p style="font-size: 16px;">
-									<br/>
-										Chatbot using Natural Language Processing (NLP) techniques to assist users in financial planning.										<br/><br/> 
-									</p>
-								</div>
-							</div>
-						</div>							
-					</div>
-					<!--================================== COMPUTER VISION PROJECTS ====================================== -->
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_006.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1><a href="#">Parking Spaces Detection <span></span></a></h2>									
-									<p style="font-size: 16px;">
-										<br/>
-										Detection of parking spaces using computer vision techniques to optimize parking management.
-										<br/><br/>										
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_007.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--  <div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn">
-											Check it out 🖱️
-										</button>
-									</div> -->
-								</div>
-								<div class="featured-cars-txt">
-									<h1><a href="#">Joint Monitoring<span></span></a></h1>
-									<p style="font-size: 16px;">
-										<br/>
-										Joint monitoring with computer vision techniques to enhance the safety and efficiency of industrial processes.
-										<br/><br/> 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img" style="max-width: 100%;">
-										<img src="assets/logo/Logo_008.png" alt="cars" style="width: 60%; height: auto;">
-									</div>
-									<!--
-									<div class="featured-model-info">
-										<button class="welcome-btn new-cars-btn" style="display: flex;">
-											Check it out 🖱️
-										</button>
-									</div>
-									-->
-								</div>
-								<div class="featured-cars-txt">
-									<h1><a href="#">BodyBuilding Monitor
-										<span></span></a></h2>									
-									<p style="font-size: 16px;">
-										<br/>
-										Bodybuilding monitor using computer vision techniques to enhance training performance and safety.
-										<br/><br/>										
-									</p>
-								</div>
-							</div>
-						</div>						
-					</div>								
-				</div>
-			</div>
-		</section>	
-		<!-- ============================================= WORK EXPERIENCE ============================================== -->
-		<section id="work_experience" class="work-experience">
-			<div class="container">
-			  <div class="section-header">
-				<h2>Work Experience</h2>
-			  </div>
-			  <div class="row" style="margin-top: 40px;">
-				<div class="col-lg-12">
-				  <div style="
-					padding: 10px;
-					border-radius: 12px;
-					box-shadow: 0 4px 20px rgba(0, 0, 139, 0.15);
-					background-color: #ffffff;
-					border: 2px solid #4169e1;">		  
-					<div class="timeline">
-					  <div class="timeline-item left">
-						<div class="content">
-						  <h3>2023 - Present</h3>
-						  <p style="font-size: 12px; color:blue;">Fullstack Developer / Data Scientist / COMOS Implementation Consultant at Innomotics - Chile</p>  
-						  <div class="divider"></div>
-						</div>
-					  </div>
-			  
-					  <div class="timeline-item right">
-						<div class="circle">
-						  <i class="fas fa-laptop-code"></i>
-						</div>
-						<div class="content">
-						  <h3>2020 - 2023</h3>
-						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Consultant at Siemens - Brasil</p>
-						  <div class="divider"></div>
-						</div>
-					  </div>
-			  
-					  <div class="timeline-item right">
-						<div class="circle">
-						  <i class="fas fa-laptop-code"></i>
-						</div>
-						<div class="content">
-						  <h3>2019 - 2020</h3>
-						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Analyst at Siemens - Brasil</p>
-						  <div class="divider"></div>
-						</div>
-					  </div>
-			  
-					  <div class="timeline-item right">
-						<div class="circle">
-						  <i class="fas fa-laptop-code"></i>
-						</div>
-						<div class="content">
-						  <h3>2017 - 2019</h3>
-						  <p style="font-size: 12px; color:blue;">Fullstack Developer / COMOS Implementation Intern at Siemens - Brasil</p>
-						  <div class="divider"></div>
-						</div>
-					  </div>
-			  
-					  <div class="timeline-item left">
-						<div class="content">
-						  <h3>2016 - 2018</h3>
-						  <p style="font-size: 12px; color:blue;">Sales Engineer Intern at Bosch Rexroth - Brasil</p>
-						</div>
-					  </div>
-			  
-					  <div class="timeline-item right">
-						<div class="content">
-						  <h3>2014 - 2016</h3>
-						  <p style="font-size: 12px; color:blue;">Automation Engineer Intern at Bombardier Transport - Brasil</p>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		</section>
-		<!--contact start-->
-		<footer id="contact"  class="contact">
-			<div class="container">
-				<div class="footer-copyright">
-					<div class="row">
-						<div class="col-sm-6">
-							<p>
-								&copy; copyright.designed and developed by <a href="https://www.themesine.com/">Leonardo</a>.
-							</p><!--/p-->
-						</div>
-						<div class="col-sm-6">
-							<div class="footer-social">							
-								<a href="#"><i class="fa fa-facebook"></i></a>	
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="#"><i class="fa fa-whatsapp"></i></a>								
-							</div>
-						</div>
-					</div>
-				</div><!--/.footer-copyright-->
-			</div><!--/.container-->
+      <article class="card">
+        <div class="card-tag">Document intelligence · Innomotics</div>
+        <div class="card-body">
+          <h3>LLM-powered plant documentation</h3>
+          <p>Document management platform integrated with Siemens COMOS: OCR and DocLayNet layout-aware parsing turn complex engineering documents into structured data; embedding-based semantic search and an LLM chatbot cut query time on the plant floor.</p>
+          <div class="stack">
+            <span class="chip">LangChain</span><span class="chip">LiteLLM</span><span class="chip">FastAPI</span><span class="chip">Vector search</span><span class="chip">OCR</span>
+          </div>
+        </div>
+      </article>
 
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.contact-->
-		<!--contact end-->
+      <article class="card">
+        <div class="card-tag">Process optimization · Innomotics</div>
+        <div class="card-body">
+          <h3>Copper ore crushing optimization</h3>
+          <p>AI models that segment processed minerals geochemically to optimize crushing-equipment usage — matching machine parameters to what is actually coming out of the ground.</p>
+          <div class="stack">
+            <span class="chip">XGBoost</span><span class="chip">K-Means</span><span class="chip">Feature engineering</span>
+          </div>
+        </div>
+      </article>
 
+      <article class="card">
+        <div class="card-tag">Plant lifecycle · Siemens / Innomotics</div>
+        <div class="card-body">
+          <h3>COMOS engineering &amp; commissioning</h3>
+          <p>Six years of COMOS customization across chemical, mining and pulp &amp; paper plants: document control with revision management, commissioning workflows, and web/desktop integrations that extend COMOS into the rest of the plant's toolchain.</p>
+          <div class="stack">
+            <span class="chip">COMOS</span><span class="chip">C#</span><span class="chip">.NET</span><span class="chip">VBScript</span><span class="chip">SQL Server</span>
+          </div>
+        </div>
+      </article>
 
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+    </div>
+  </div>
+</section>
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
+<section id="lab" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no mono">SHT-02</span><h2>Personal lab</h2></div>
+    <p class="sec-note">Side projects where I experiment outside the industrial domain. Code on GitHub.</p>
+    <div class="lab-grid">
+      <div class="lab-card">
+        <h3>Investify</h3>
+        <p>Financial web platform supporting investment decisions in the Brazilian and U.S. stock markets, with back-testing tools and LSTM price-prediction experiments.</p>
+        <a class="mono" href="https://github.com/antunes1993" target="_blank" rel="noopener">github.com/antunes1993 →</a>
+      </div>
+      <div class="lab-card">
+        <h3>Parking space detection</h3>
+        <p>Computer-vision pipeline that detects free parking spaces from camera feeds to optimize parking management.</p>
+        <a class="mono" href="https://github.com/antunes1993" target="_blank" rel="noopener">github.com/antunes1993 →</a>
+      </div>
+      <div class="lab-card">
+        <h3>Industrial joint monitoring</h3>
+        <p>Computer-vision monitoring of mechanical joints to improve safety and efficiency of industrial processes.</p>
+        <a class="mono" href="https://github.com/antunes1993" target="_blank" rel="noopener">github.com/antunes1993 →</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no mono">SHT-03</span><h2>Experience</h2></div>
+    <div class="xp">
+      <div class="xp-item current">
+        <span class="xp-dates">2023 — PRESENT</span>
+        <h3>Senior Fullstack Developer / Data Scientist</h3>
+        <p class="xp-org">Innomotics — Chile (remote)</p>
+        <ul>
+          <li>ML for predictive maintenance, anomaly detection and crushing optimization in copper mining</li>
+          <li>Digital Twin prototypes and real-time monitoring applications</li>
+          <li>LLM-based document intelligence integrated with COMOS</li>
+        </ul>
+      </div>
+      <div class="xp-item">
+        <span class="xp-dates">2020 — 2023</span>
+        <h3>Fullstack Developer / COMOS Consultant</h3>
+        <p class="xp-org">Siemens — Brazil</p>
+        <ul>
+          <li>COMOS customization for chemical, mining and pulp &amp; paper clients</li>
+          <li>Web and desktop integrations extending COMOS workflows</li>
+        </ul>
+      </div>
+      <div class="xp-item">
+        <span class="xp-dates">2017 — 2020</span>
+        <h3>COMOS Implementation Analyst → Developer</h3>
+        <p class="xp-org">Siemens — Brazil</p>
+      </div>
+      <div class="xp-item">
+        <span class="xp-dates">2016 — 2018</span>
+        <h3>Sales Engineering Intern</h3>
+        <p class="xp-org">Bosch Rexroth — Brazil</p>
+      </div>
+      <div class="xp-item">
+        <span class="xp-dates">2014 — 2016</span>
+        <h3>Automation Engineering Intern</h3>
+        <p class="xp-org">Bombardier Transportation — Brazil</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no mono">SHT-04</span><h2>Skills legend</h2></div>
+    <div class="legend">
+      <div class="legend-row"><div class="legend-key">LANGUAGES</div><div class="legend-val">Python, SQL, JavaScript, C#, VBScript</div></div>
+      <div class="legend-row"><div class="legend-key">ML / DATA SCIENCE</div><div class="legend-val">scikit-learn, TensorFlow, Keras, PyTorch, XGBoost · Random Forest, SVM, K-Means, PCA, CNNs, LSTMs · feature engineering, dimensionality reduction</div></div>
+      <div class="legend-row"><div class="legend-key">STATISTICAL METHODS</div><div class="legend-val">Wasserstein distance, PELT change-point detection, Non-Homogeneous Poisson Processes (NHPP), exploratory data analysis</div></div>
+      <div class="legend-row"><div class="legend-key">NLP / LLMS</div><div class="legend-val">LangChain, LiteLLM, embedding-based retrieval, semantic search, RAG pipelines, OCR + DocLayNet layout-aware parsing, text classification, NER</div></div>
+      <div class="legend-row"><div class="legend-key">WEB</div><div class="legend-val">Django, FastAPI, Vue.js, REST APIs, WebSockets, JWT auth, microservices</div></div>
+      <div class="legend-row"><div class="legend-key">DATABASES</div><div class="legend-val">PostgreSQL, MySQL, SQL Server, TimescaleDB, vector stores</div></div>
+      <div class="legend-row"><div class="legend-key">CLOUD / DEVOPS</div><div class="legend-val">Microsoft Azure (Web Apps, Managed DBs, VMs), Docker &amp; Docker Compose, GitHub Actions, CI/CD, cloud cost optimization</div></div>
+      <div class="legend-row"><div class="legend-key">DOMAIN</div><div class="legend-val">Siemens COMOS, plant engineering &amp; commissioning, industrial process data, predictive maintenance</div></div>
+    </div>
+  </div>
+</section>
 
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
+<section id="education" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no mono">SHT-05</span><h2>Education &amp; publication</h2></div>
+    <div class="edu-grid">
+      <div class="edu">
+        <span class="mono">2025 — PRESENT</span>
+        <h3>M.Sc. Computer Science (in progress)</h3>
+        <p>CEFET/RJ — Brazil</p>
+      </div>
+      <div class="edu">
+        <span class="mono">2022 — 2024</span>
+        <h3>MBA, Data Science &amp; Analytics</h3>
+        <p>University of São Paulo (USP/Esalq)</p>
+      </div>
+      <div class="edu">
+        <span class="mono">2020 — 2022</span>
+        <h3>MBA, Computer Engineering</h3>
+        <p>COPPE — Federal University of Rio de Janeiro (UFRJ)</p>
+      </div>
+      <div class="edu">
+        <span class="mono">2014 — 2019</span>
+        <h3>B.Sc., Control &amp; Automation Engineering</h3>
+        <p>CEFET/RJ — Brazil</p>
+      </div>
+    </div>
+    <div class="pub">
+      <span class="mono">PUBLICATION · DIGITAL MINING 2024</span>
+      <h3>Digital Twin and Synthetic Data Generation Analytics in Crushing and Transport Systems</h3>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p class="contact-line">Open to senior fullstack / ML engineering roles — fully remote, EMEA or Americas time zones. English, Spanish and Portuguese working languages; advanced German.</p>
+    <div class="contact-links">
+      <a class="btn" href="mailto:antunesleonardo12@gmail.com">antunesleonardo12@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/antunes1993" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="foot-meta">LEONARDO ANTUNES DOS SANTOS · REV 2026-07 · BUILT BY HAND, NO TEMPLATE</p>
+  </div>
+</footer>
+
+</body>
 </html>
